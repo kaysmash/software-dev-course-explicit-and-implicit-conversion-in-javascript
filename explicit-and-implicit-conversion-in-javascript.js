@@ -22,11 +22,22 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("true"); //changed Boolean to "true" to reflect valid results
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let ageNum = Number(age); // converted age to number
+let year = "5"; // defined year
+let ageNumTwo = Number(year); // converted string to number
+let totalAge = ageNum + ageNumTwo; // changed variable to match above, added by ensuring both are number values
 console.log("Total Age: " + totalAge);
+
+// new code examples for part 2
+let ageOfDeath = undefined;
+console.log("Deceased: " + (Boolean(ageOfDeath))); // implicit conversion, Boolean with edge case
+
+let yearNow = "2026"; 
+let yearBorn = "1994";
+console.log("Current age: " + (yearNow - yearBorn)); // explicit conversion, arithmetic operations 
